@@ -40,7 +40,7 @@ Los documentos son almacenados en memoria utilizando un Árbol AVL autobalancead
 ---
 
 # Estructura del proyecto
-
+```plaintext
 gestorbd/
 │
 ├── data/
@@ -71,9 +71,10 @@ gestorbd/
 │                       └── JsonUtil.java
 │
 └── pom.xml
-
+```
 ---
 # Requisitos
+
 - Java 11 o superior
 - Maven
 
@@ -84,20 +85,18 @@ mvn -version
 Configuración del proyecto
 
 # 1. Clonar o descargar el proyecto
-git clone <url-del-repositorio> o descargar el archivo ZIP.
+
+git clone https://github.com/Juangf1222/BasesDeDatosNoRelacional o descargar el archivo ZIP.
 
 # 2. Abrir el proyecto
 
 Abrir la carpeta gestorbd en:
 
-IntelliJ IDEA
-VS Code
-Eclipse
-NetBeans
+IntelliJ IDEA, VS Code, Eclipse, NetBeans
 
 # 3. Compilar el proyecto
+
 mvn clean compile
-Ejecución
 
 # Ejecutar con Maven:
 
@@ -142,7 +141,8 @@ data/
 Ejemplo:
 
 data/usuarios.json
-Ejemplo de colección JSON
+
+# Ejemplo de colección JSON
 [
   {
     "id": "1",
