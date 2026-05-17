@@ -1,0 +1,22 @@
+# Normalizar finales de línea automáticamente
+* text=auto
+
+# Archivos Java
+*.java text
+
+# Archivos XML
+*.xml text
+
+# Archivos JSON
+*.json text
+
+# Archivos Markdown
+*.md text
+
+# Scripts
+*.sh text eol=lf
+*.bat text eol=crlf
+
+# Maven Wrapper
+mvnw text eol=lf
+mvnw.cmd text eol=crlf
