@@ -78,11 +78,16 @@ gestorbd/
 - Java 11 o superior
 - Maven
 
+---
+
 # Verificar instalación:
 
 java -version
 mvn -version
-Configuración del proyecto
+
+---
+
+#Configuración del proyecto
 
 # 1. Clonar o descargar el proyecto
 
@@ -106,9 +111,7 @@ mvn exec:java "-Dexec.mainClass=com.gestorbd.App"
 
 Al iniciar, el programa solicitará una colección.
 
-Ejemplo:
-
-Ingrese el nombre de la colección a usar:
+Ejemplo: "Ingrese el nombre de la colección a usar:"
 
 Si la colección no existe, se creará automáticamente.
 
@@ -125,12 +128,14 @@ Nombre del campo: edad
 Valor del campo: 20
 
 Resultado almacenado:
-
+```plaintext
 {
   "id": "1",
   "nombre": "Juan",
   "edad": 20
 }
+```
+---
 
 # Persistencia de datos
 
@@ -142,7 +147,10 @@ Ejemplo:
 
 data/usuarios.json
 
+---
+
 # Ejemplo de colección JSON
+```plaintext
 [
   {
     "id": "1",
@@ -155,3 +163,6 @@ data/usuarios.json
     "edad": 25
   }
 ]
+```
+
+----
