@@ -83,11 +83,12 @@ gestorbd/
 # Verificar instalación:
 
 java -version
+
 mvn -version
 
 ---
 
-#Configuración del proyecto
+# Configuración del proyecto
 
 # 1. Clonar o descargar el proyecto
 
