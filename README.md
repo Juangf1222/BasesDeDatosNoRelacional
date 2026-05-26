@@ -38,6 +38,21 @@ Los documentos son almacenados en memoria utilizando un Árbol AVL autobalancead
 - Programación Orientada a Objetos
 
 ---
+# Arquitectura del sistema
+
+El sistema está dividido en módulos independientes:
+
+- consola → interfaz CLI interactiva
+- modelo → representación de documentos
+- estructura → implementación del Árbol AVL
+- servicio → lógica principal del gestor
+- util → serialización y deserialización JSON
+
+Flujo general:
+
+CLI → GestorBaseDatos → Árbol AVL → Persistencia JSON
+
+---
 
 # Estructura del proyecto
 ```plaintext
@@ -92,7 +107,10 @@ mvn -version
 
 # 1. Clonar o descargar el proyecto
 
-git clone https://github.com/Juangf1222/BasesDeDatosNoRelacional o descargar el archivo ZIP.
+```bash
+git clone https://github.com/Juangf1222/BasesDeDatosNoRelacional
+```
+o descargar el archivo ZIP.
 
 # 2. Abrir el proyecto
 
@@ -101,13 +119,13 @@ Abrir la carpeta gestorbd en:
 IntelliJ IDEA, VS Code, Eclipse, NetBeans
 
 # 3. Compilar el proyecto
-
+```bash
 mvn clean compile
-
+```
 # Ejecutar con Maven:
-
+```bash
 mvn exec:java "-Dexec.mainClass=com.gestorbd.App"
-
+```
 # Uso del sistema
 
 Al iniciar, el programa solicitará una colección.
@@ -135,6 +153,24 @@ Resultado almacenado:
   "nombre": "Juan",
   "edad": 20
 }
+```
+---
+# Pruebas unitarias
+
+El proyecto incluye pruebas unitarias desarrolladas con JUnit para validar el correcto funcionamiento del sistema.
+
+Casos de prueba implementados:
+
+- Inserción de documentos
+- Búsqueda por ID
+- Actualización de campos
+- Eliminación de documentos
+- Persistencia y recuperación tras reinicio
+
+Ejecutar pruebas:
+
+```bash
+mvn test
 ```
 ---
 
@@ -167,3 +203,41 @@ data/usuarios.json
 ```
 
 ----
+
+# Datasets de prueba
+
+El proyecto incluye datasets de prueba ubicados en:
+
+```plaintext
+data/
+```
+
+Datasets incluidos:
+
+- dataset_pequeno.json
+- dataset_mediano.json
+
+Estos archivos permiten probar inserción, persistencia y rendimiento básico del árbol AVL.
+
+---
+
+# Complejidad de operaciones
+
+Gracias al uso de Árboles AVL autobalanceados, las operaciones principales tienen las siguientes complejidades:
+
+| Operación | Complejidad |
+|------------|-------------|
+| Inserción | O(log n) |
+| Búsqueda | O(log n) |
+| Eliminación | O(log n) |
+| Recorrido inorder | O(n) |
+| Actualización | O(log n) |
+
+El árbol AVL garantiza balanceo automático después de inserciones y eliminaciones.
+---
+
+# Autores
+
+- Juan Galindo - 20231020230
+- Juan Sebastian Gutierrez Cuadros- 20232020146
+- Julián Darío Romero Buitrago 20232020240
